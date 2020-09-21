@@ -1,13 +1,13 @@
-((d, w) => {
-  const frag = d.createDocumentFragment(),
-    navbar = d.querySelector('.navbar');
+((doc, w) => {
+  const frag = doc.createDocumentFragment(),
+    navbar = doc.querySelector('.navbar');
   for (let m = 0; m < 100; m++) {
-    frag.appendChild(d.createElement('br'));
+    frag.appendChild(doc.createElement('br'));
   }
-  d.body.appendChild(frag);
+  doc.body.appendChild(frag);
 
-  d.addEventListener('scroll', () => {
-    let scroll = d.documentElement.scrollTop;
+  doc.addEventListener('scroll', () => {
+    let scroll = doc.documentElement.scrollTop;
 
     navbar.classList[50 <= scroll ? 'add' : 'remove']('scrolling-nav-bar');
   });
