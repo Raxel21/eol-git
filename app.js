@@ -1,4 +1,4 @@
-((d) => {
+((d, w) => {
   const frag = d.createDocumentFragment(),
     navbar = d.querySelector('.navbar');
   for (let m = 0; m < 100; m++) {
@@ -11,4 +11,10 @@
 
     navbar.classList[50 <= scroll ? 'add' : 'remove']('scrolling-nav-bar');
   });
-})(document);
+
+  w.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.code == 'Backslash') {
+      alert('Hello World');
+    }
+  });
+})(document, window);
