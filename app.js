@@ -17,4 +17,8 @@
       alert('Hello World');
     }
   });
+
+  for(let s = 0; s < 100; s++) {
+    console.log(s);
+  }
 })(document, window);
