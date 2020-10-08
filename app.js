@@ -18,7 +18,13 @@
     }
   });
 
-  for(let s = 0; s < 100; s++) {
+  for (let s = 0; s < 100; s++) {
     console.log(s);
   }
+
+  let user = {
+    name: 'Juan',
+    lastName: 'Díaz',
+    age: 21,
+  };
 })(document, window);
